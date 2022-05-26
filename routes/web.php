@@ -21,20 +21,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/app/products/add', [ViewsProdutos_Controller::class, 'adicionar_produtos']);
-Route::get('/app/products/modify', [ViewsProdutos_Controller::class, 'alterar_produtos']);
-Route::get('/app/products/delete', [ViewsProdutos_Controller::class, 'adicionar_produtos']);
+Route::get('/app/products/add', [ViewsProdutos_Controller::class, 'add_products']);
+Route::get('/app/products/modify', [ViewsProdutos_Controller::class, 'modify_products']);
+Route::get('/app/products/delete', [ViewsProdutos_Controller::class, 'delete_products']);
 
-Route::get('/app/categorias/add', [ViewsCategorias_Controller::class, 'adicionar_categorias']);
-Route::get('/app/categorias/delete', [ViewsCategorias_Controller::class, 'excluir_categorias']);
+Route::get('/app/categorias/add', [ViewsCategorias_Controller::class, 'add_category']);
+Route::get('/app/categorias/delete', [ViewsCategorias_Controller::class, 'delete_category']);
 
-Route::get('/app/user/add', [ViewsUser_Controller::class, 'adicionar_categorias']);
-Route::get('/app/user/modify', [ViewsUser_Controller::class, 'adicionar_categorias']);
-Route::get('/app/user/delete', [ViewsUser_Controller::class, 'adicionar_categorias']);
+Route::get('/app/user/add', [ViewsUser_Controller::class, 'add_user']);
+Route::get('/app/user/modify', [ViewsUser_Controller::class, 'modify_user']);
+Route::get('/app/user/delete', [ViewsUser_Controller::class, 'delete_user']);
 
 
 Route::get('/app/navbar', [ViewsHome_Controller::class, 'navbar']);
-Route::get('/app/home_usuario', [ViewsHome_Controller::class, 'home_user']);
+Route::get('/app/home', [ViewsHome_Controller::class, 'body']);
+Route::get('/app/footer', [ViewsHome_Controller::class, 'navbar']);
+
 
 
 
